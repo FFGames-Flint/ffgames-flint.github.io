@@ -1,43 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>FFGames</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #111;
-            color: white;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            font-size: 48px;
-        }
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background: #00c853;
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-            border-radius: 8px;
-        }
-        .button:hover {
-            background: #00a844;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FFGames Studio</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f0f0f;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1f1f1f, #121212);
+}
+
+header h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+header p {
+    color: #aaa;
+    font-size: 18px;
+}
+
+.section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.game {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.game:hover {
+    transform: translateY(-5px);
+}
+
+.game h2 {
+    margin-top: 0;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 24px;
+    background: #00c853;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #00a844;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+    font-size: 14px;
+    border-top: 1px solid #222;
+}
+</style>
 </head>
+
 <body>
 
+<header>
     <h1>FFGames Studio</h1>
-    <p>Indie Game Developer</p>
+    <p>Indie Mobile Game Developer</p>
+</header>
 
-    <a class="button" href="https://play.google.com" target="_blank">
-        Download on Google Play
-    </a>
+<div class="section">
+
+    <div class="game">
+        <h2>Archaeologist - Restorer</h2>
+        <p>Restore ancient artifacts piece by piece. Travel through historical locations and become a master restorer.</p>
+        <a class="button" href="https://play.google.com/store/apps/details?id=com.FFGames.ArchaeologistRestorer" target="_blank">
+            Download on Google Play
+        </a>
+    </div>
+
+    <div class="game">
+        <h2>Sea Bus</h2>
+        <p>Drive across water and land in this unique vehicle simulation experience.</p>
+        <a class="button" href="https://play.google.com/store/apps/details?id=com.FFGames.SeaBus" target="_blank">
+            Download on Google Play
+        </a>
+    </div>
+
+    <div class="game">
+        <h2>PUZZLE 3D: Restorer</h2>
+        <p>Relaxing 3D puzzle experience where you assemble broken objects and bring them back to life.</p>
+        <a class="button" href="https://play.google.com/store/apps/details?id=com.FFGames.Puzzle3DGame" target="_blank">
+            Download on Google Play
+        </a>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 FFGames Studio. All rights reserved.
+</footer>
 
 </body>
 </html>
