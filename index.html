@@ -6,60 +6,109 @@
 <title>FFGames Studio</title>
 
 <style>
+* { box-sizing: border-box; }
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #0f0f0f;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0e0e0e;
     color: white;
+    scroll-behavior: smooth;
 }
 
 header {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg, #1f1f1f, #121212);
+    background: linear-gradient(135deg, #1b1b1b, #111);
+    padding: 20px;
 }
 
 header h1 {
-    font-size: 48px;
+    font-size: 60px;
     margin: 0;
 }
 
 header p {
+    font-size: 20px;
     color: #aaa;
-    font-size: 18px;
+    margin-top: 10px;
 }
 
-.section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.game {
-    background: #1a1a1a;
-    padding: 30px;
-    border-radius: 12px;
-    margin-bottom: 30px;
+.cta {
+    margin-top: 30px;
+    padding: 14px 28px;
+    background: #00c853;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
     transition: 0.3s;
 }
 
-.game:hover {
-    transform: translateY(-5px);
+.cta:hover {
+    background: #00a844;
 }
 
-.game h2 {
-    margin-top: 0;
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.about {
+    text-align: center;
+    color: #bbb;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.game {
+    margin-bottom: 80px;
+}
+
+.game h3 {
+    font-size: 28px;
+}
+
+.screenshots {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    margin: 20px 0;
+}
+
+.screenshots img {
+    width: 230px;
+    border-radius: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 420px;
+    border-radius: 12px;
+    margin-top: 20px;
 }
 
 .button {
     display: inline-block;
-    margin-top: 15px;
-    padding: 12px 24px;
+    margin-top: 20px;
+    padding: 12px 22px;
     background: #00c853;
     color: white;
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .button:hover {
@@ -68,10 +117,16 @@ header p {
 
 footer {
     text-align: center;
-    padding: 30px;
-    color: #777;
-    font-size: 14px;
+    padding: 40px;
     border-top: 1px solid #222;
+    color: #777;
+}
+
+a { color: #00c853; }
+
+@media(max-width:768px){
+    header h1 { font-size: 40px; }
+    iframe { height: 250px; }
 }
 </style>
 </head>
@@ -80,39 +135,78 @@ footer {
 
 <header>
     <h1>FFGames Studio</h1>
-    <p>Indie Mobile Game Developer</p>
+    <p>Crafting immersive mobile experiences</p>
+    <a href="#games" class="cta">Explore Our Games</a>
 </header>
 
-<div class="section">
+<section class="section">
+    <h2>About Studio</h2>
+    <div class="about">
+        FFGames is an indie mobile game studio focused on creative 3D puzzle 
+        and simulation experiences. We combine artistic visuals with engaging gameplay 
+        to deliver relaxing and immersive titles for players worldwide.
+    </div>
+</section>
 
+<section id="games" class="section">
+    <h2>Our Games</h2>
+
+    <!-- Archaeologist -->
     <div class="game">
-        <h2>Archaeologist - Restorer</h2>
-        <p>Restore ancient artifacts piece by piece. Travel through historical locations and become a master restorer.</p>
+        <h3>Archaeologist - Restorer</h3>
+        <p>Restore ancient artifacts and explore historical locations piece by piece.</p>
+
+        <div class="screenshots">
+            <img src="images/Ar_Screenshot_Lobby.jpg">
+            <img src="images/Ar_Screenshot_Eliphan.jpg">
+        </div>
+
+        <iframe src="https://youtu.be/YVAE_bud_DE?si=--0CdbozvNHQi7lj" allowfullscreen></iframe>
+
         <a class="button" href="https://play.google.com/store/apps/details?id=com.FFGames.ArchaeologistRestorer" target="_blank">
-            Download on Google Play
+            Get it on Google Play
         </a>
     </div>
 
+    <!-- Sea Bus -->
     <div class="game">
-        <h2>Sea Bus</h2>
-        <p>Drive across water and land in this unique vehicle simulation experience.</p>
+        <h3>Sea Bus</h3>
+        <p>Drive across land and water in a unique vehicle simulation experience.</p>
+
+        <div class="screenshots">
+            <img src="images/Sb_Screen_1.jpg">
+            <img src="images/Sb_Screen_3.jpg">
+        </div>
+
+        <iframe src="https://youtu.be/Mk6HXVSSUhg?si=Ta_PJruq1IU9zjei" allowfullscreen></iframe>
+
         <a class="button" href="https://play.google.com/store/apps/details?id=com.FFGames.SeaBus" target="_blank">
-            Download on Google Play
+            Get it on Google Play
         </a>
     </div>
 
+    <!-- Puzzle 3D -->
     <div class="game">
-        <h2>PUZZLE 3D: Restorer</h2>
-        <p>Relaxing 3D puzzle experience where you assemble broken objects and bring them back to life.</p>
+        <h3>PUZZLE 3D: Restorer</h3>
+        <p>Relaxing 3D puzzle experience where broken objects come back to life.</p>
+
+        <div class="screenshots">
+            <img src="images/Puzzle3D_Screen_Title.jpg">           
+        </div>
+
+        <iframe src="https://youtu.be/9-w4JHHKa34?si=N7k5HmQiOwFQkehi" allowfullscreen></iframe>
+
         <a class="button" href="https://play.google.com/store/apps/details?id=com.FFGames.Puzzle3DGame" target="_blank">
-            Download on Google Play
+            Get it on Google Play
         </a>
     </div>
 
-</div>
+</section>
 
 <footer>
-    © 2026 FFGames Studio. All rights reserved.
+    <p>Contact: your@email.com</p>
+    <p><a href="privacy.html">Privacy Policy</a></p>
+    <p>© 2026 FFGames Studio</p>
 </footer>
 
 </body>
